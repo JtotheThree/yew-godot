@@ -1,0 +1,11 @@
+[serve]
+address = "127.0.0.1"
+port = 8001
+
+[watch]
+ignore = ["gd-project/.godot/", "export/", "dist/"]
+
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "flatpak run org.godotengine.Godot --path gd-project/ --export-debug 'Web' --headless"]

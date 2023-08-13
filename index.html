@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<link data-trunk rel="icon" href="logo.svg" type="image/svg" />-->
+  <link data-trunk rel="copy-file" href="./export/Gd-project.wasm" />
+  <link data-trunk rel="copy-file" href="./export/Gd-project.pck" />
+  <link data-trunk rel="copy-file" href="./export/Gd-project.worker.js" />
+  <link data-trunk rel="copy-file" href="./export/Gd-project.audio.worklet.js" />
+  <link rel="preload" href="./Gd-project.wasm" as="fetch" type="application/wasm" crossorigin="">
+  <script data-trunk src="./export/Gd-project.js"></script>
+  <title>Yew-Godot Example</title>
+</head>
+
+<body>
+</body>
+
+<script>
+  const GODOT_CONFIG = {
+    "args": [],
+    "canvasResizePolicy": 0,
+    "executable": "Gd-project",
+    "experimentalVK": false,
+    "focusCanvas": false,
+    "gdextensionLibs": []
+  };
+  var engine = new Engine(GODOT_CONFIG);
+  engine.startGame();
+</script>
+
+</html>
