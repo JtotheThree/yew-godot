@@ -1,3 +1,7 @@
+Example of how to use Yew to host Godot 4 HTML 5 export and also send events to Godot from Yew.
+
+![Alt text](/screenshot.png?raw=true "Screenshot")
+
 Until Trunk support setting custom headers, we need to proxy so we can tell the browser we need wasm threading support
 
 # Start the nginx proxy (sudo is required for networking host mode) with:
